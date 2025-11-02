@@ -12,6 +12,21 @@ Este proyecto implementa un flujo completo de **procesamiento de datos en tiempo
 
 ---
 
+## Procesamiento batch (Google Colab)
+
+El archivo [`eda_accidentes.ipynb`](./eda_accidentes.ipynb) contiene la limpieza y el análisis exploratorio
+del dataset original antes de integrarlo con Kafka y Spark Streaming.
+
+Incluye:
+- Normalización de columnas de fecha y hora (`FECHA_OCUR`, `HORA_OCURR`).
+- Limpieza de coordenadas (`LATITUD`, `LONGITUD`).
+- Generación de variables temporales (`MES`, `DIA_SEMANA`, `HORA`).
+- Análisis por `LOCALIDAD`, `GRAVEDAD` y `CLASE_ACC`.
+
+Este notebook se ejecutó en **Google Colab** con PySpark.
+
+---
+
 ## 1. Levantar infraestructura Kafka
 ```bash
 cd ~/kafka
